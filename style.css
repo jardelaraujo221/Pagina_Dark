@@ -1,0 +1,127 @@
+
+/* Estilos do Menu Lateral */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #2d2d2d;
+    color: #fff;
+    margin: 0;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #292b2c;
+    padding-top: 50px;
+    transition: all 0.3s ease;
+}
+
+#sidebar h3 {
+    color: #fff;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+#sidebar h3 span {
+    color: #4CAF50;
+}
+
+ul.components {
+    padding: 0;
+    list-style: none;
+}
+
+ul.components li a {
+    color: #ddd;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+}
+
+ul.components li a:hover {
+    background-color: #575757;
+    color: #fff;
+}
+
+#content {
+    margin-left: 260px;
+    padding: 20px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+header {
+    background-color: #4CAF50;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    color: #fff;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    #sidebar {
+        width: 200px;
+    }
+
+    #content {
+        margin-left: 200px;
+    }
+
+    .payment-info {
+        font-size: 14px;
+    }
+
+    header h1 {
+        font-size: 22px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    #sidebar {
+        width: 0;
+        position: absolute;
+        top: 0;
+        left: -250px;
+    }
+
+    #content {
+        margin-left: 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .sidebar.active {
+        width: 250px;
+        left: 0;
+    }
+
+    #content.active {
+        margin-left: 250px;
+    }
+}

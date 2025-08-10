@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento via PIX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Menu Lateral -->
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>push-in <span>pay</span></h3>
+        </div>
+        <ul class="list-unstyled components">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Criar PIX</a></li>
+            <li><a href="#">Histórico de Transações</a></li>
+            <li><a href="#">Configurações</a></li>
+        </ul>
+    </nav>
+
+    <!-- Conteúdo da Página -->
+    <div id="content">
+        <header>
+            <h1>Pagamento via PIX</h1>
+        </header>
+
+        <section class="content">
+            <h2>Insira o valor para pagamento</h2>
+            <form id="paymentForm">
+                <input type="number" id="value" name="value" placeholder="Digite o valor em reais" required>
+                <button type="button" class="payment-button" onclick="gerarPIX()">Gerar PIX</button>
+            </form>
+
+            <h3>Cobrança via PIX</h3>
+            <div class="payment-info">
+                <p><strong>Valor da cobrança:</strong> R$ <span id="valueDisplay">0,00</span></p>
+            </div>
+
+            <div id="qrCodeContainer"></div>
+            <textarea id="pixCode" style="display:none;"></textarea>
+        </section>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Pushin Pay Integration. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
